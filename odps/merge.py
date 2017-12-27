@@ -21,9 +21,9 @@ def getAliyunId():
 
 #通过ak里的aliyun账号，到uim和ummak库当中获取ak
 def getAk():
-    uim = mysql.connect(host='uim.mysql.rds.yun.zj',port=3306,user='uim',passwd='v1xzEt9kbEliwdub',db='uim')
+    uim = mysql.connect(host='xxxx',port=xxxx,user='xxxxxx',passwd='xxxx',db='uim')
     uimcur = uim.cursor()
-    ummak = mysql.connect(host='ummak.mysql.rds.yun.zj',port=3402,user='ummak',passwd='b5hgljnngCTu8wvc',db='ummak')
+    ummak = mysql.connect(host='xxxx',port=xxxx,user='xxxx',passwd='xxxxx',db='xxxxx')
     ummakcur = ummak.cursor()
     for k,v in ak.items():
         if k == 'odps_smoke_test':
@@ -118,7 +118,7 @@ if __name__ == '__main__':
         ak = json.load(fd)
         fd.close()
     else:
-        ak = {'odps_smoke_test':{'aliyunId':99999999999999999999999,'access_id':'a3Es0X662vmZuW9Y','access_key':'kkIBst7vQDvt2lPW5a72bAJdnqMrrD'}}
+        ak = {'odps_smoke_test':{'aliyunId':'XXX','access_id':'xxx','access_key':'xxxx'}}
     getProject()
     getAliyunId()
     getAk()
